@@ -83,11 +83,11 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
       
       @(UMSocialPlatformType_WechatFavorite): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK), @(UMS_SHARE_TYPE_FILE)],
       
-      @(UMSocialPlatformType_Sina): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_TEXT_IMAGE), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
+      @(UMSocialPlatformType_Sina): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_MULTI), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_TEXT_IMAGE), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
       @(UMSocialPlatformType_QQ): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
-      @(UMSocialPlatformType_Qzone): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
+      @(UMSocialPlatformType_Qzone): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_MULTI), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
       @(UMSocialPlatformType_Tim): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
@@ -159,6 +159,11 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
             return @"本地图片";
         }
             break;
+        case UMS_SHARE_TYPE_IMAGE_MULTI:
+        {
+            return @"多张图片";
+        }
+            break;
         case UMS_SHARE_TYPE_IMAGE_URL:
         {
             return @"HTTPS网络图片";
@@ -228,6 +233,11 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
         case UMS_SHARE_TYPE_IMAGE:
         {
             [self shareImageToPlatformType:self.platform];
+        }
+            break;
+        case UMS_SHARE_TYPE_IMAGE_MULTI:
+        {
+            [self shareMultiImageToPlatformType:self.platform];
         }
             break;
         case UMS_SHARE_TYPE_IMAGE_URL:
@@ -511,6 +521,46 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
 #endif
         if (error) {
             UMSocialLogInfo(@"************Share fail with error %@*********",error);
+        }else{
+            if ([data isKindOfClass:[UMSocialShareResponse class]]) {
+                UMSocialShareResponse *resp = data;
+                //分享结果消息
+                UMSocialLogInfo(@"response message is %@",resp.message);
+                //第三方原始返回的数据
+                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+                
+            }else{
+                UMSocialLogInfo(@"response data is %@",data);
+            }
+        }
+        [self alertWithError:error];
+    }];
+}
+     
+     
+     //分享多张图片
+- (void)shareMultiImageToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    messageObject.text = @"欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广！";
+
+    //创建图片内容对象
+    UMShareImageObject *shareObject = [[UMShareImageObject alloc] init];
+
+    shareObject.shareImageArray = @[UIImagePNGRepresentation([UIImage imageNamed:@"logo"]), UIImagePNGRepresentation([UIImage imageNamed:@"icon"]), UIImagePNGRepresentation([UIImage imageNamed:@"logo"]), [UIImage imageNamed:@"icon"], [UIImage imageNamed:@"logo"], [UIImage imageNamed:@"icon"], [UIImage imageNamed:@"logo"], [UIImage imageNamed:@"icon"], [UIImage imageNamed:@"logo"]];
+
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+
+#ifdef UM_Swift
+[UMSocialSwiftInterface shareWithPlattype:platformType messageObject:messageObject viewController:self completion:^(UMSocialShareResponse * data, NSError * error) {
+#else
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+#endif
+        if (error) {
+            UMSocialLogInfo(@"************分享失败 %@*********",error);
         }else{
             if ([data isKindOfClass:[UMSocialShareResponse class]]) {
                 UMSocialShareResponse *resp = data;

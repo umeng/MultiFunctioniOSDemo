@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface UMSocialMessageObject : NSObject
@@ -84,10 +85,17 @@
 
 @interface UMShareImageObject : UMShareObject
 
-/** 图片内容 （可以是UIImage类对象，也可以是NSdata类对象，也可以是图片链接imageUrl NSString类对象）
+/** 分享单个图片（支持UIImage，NSdata以及图片链接Url NSString类对象集合）
  * @note 图片大小根据各个平台限制而定
  */
 @property (nonatomic, retain) id shareImage;
+
+/** 分享图片数组，支持 UIImage、NSData 类型
+ * @note 仅支持分享到：
+ *      微博平台，最多可分享9张图片
+ *      QZone平台，最多可分享20张图片
+ */
+@property (nonatomic, copy) NSArray *shareImageArray;
 
 /**
  * @param title 标题

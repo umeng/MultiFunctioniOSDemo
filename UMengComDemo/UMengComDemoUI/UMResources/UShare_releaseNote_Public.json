@@ -23,6 +23,10 @@
       "date": "2018-03-13",
       "title": "v6.9.0",
       "content": "增加日志分类打印，统一组件化日志打印风格，便于定位问题。"
+},{
+      "date": "2018-04-19",
+      "title": "v6.9.1",
+      "content": "1.支持微博分享多张图片，可同时图文分享，支持iOS8+，详情参考 https://developer.umeng.com/docs/66632/detail/70146。\n2.支持QZone分享多张图片，详情参考 https://developer.umeng.com/docs/66632/detail/70147。\n3.启动性能优化，组件加载性能优化。"
 }
 ]
 
