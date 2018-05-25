@@ -11,9 +11,9 @@
 #import <TwitterCore/TwitterCore.h>
 #import <UIKit/UIKit.h>
 
-//#if __IPHONE_OS_VERSION_MIN_REQUIRED < 90000
-//#error "TwitterKit doesn't support iOS 8.x and lower. Please, change your minimum deployment target to iOS 9.0"
-//#endif
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 90000
+#error "TwitterKit doesn't support iOS 8.x and lower. Please, change your minimum deployment target to iOS 9.0"
+#endif
 
 #import "TWTRAPIClient.h"
 #import "TWTRCollectionTimelineDataSource.h"

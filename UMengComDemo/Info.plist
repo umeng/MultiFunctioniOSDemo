@@ -298,16 +298,20 @@
         <string>pinterestsdk.v1</string>
         <string>dingtalk</string>
         <string>dingtalk-open</string>
+        <!-- 印象笔记 -->
         <string>evernote</string>
         <string>en</string>
         <string>enx</string>
         <string>evernotecid</string>
         <string>evernotemsg</string>
+        <!-- 有道云笔记-->
         <string>youdaonote</string>
         <string>ynotedictfav</string>
         <string>com.youdao.note.todayViewNote</string>
         <string>ynotesharesdk</string>
+        <!-- gplus-->
         <string>gplus</string>
+        <!-- pocket-->
         <string>pocket</string>
         <string>readitlater</string>
         <string>pocket-oauth-v1</string>
@@ -317,17 +321,17 @@
         <string>com.ideashower.ReadItLaterPro</string>
         <string>com.ideashower.ReadItLaterProAlpha</string>
         <string>com.ideashower.ReadItLaterProEnterprise</string>
+        <!-- vk-->
         <string>vk</string>
         <string>vk-share</string>
         <string>vkauthorize</string>
-        <string>fbauth</string>
+        <!-- facebookMessage-->
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fb-messenger-share-api</string>
         <string>fbauth2</string>
-        <string>fb-messenger-api20140430</string>
-        <string>fb-messenger-platform</string>
-        <string>fb-messenger-platform-20150128</string>
-        <string>fb-messenger-platform-20150218</string>
-        <string>fb-messenger-platform-20150305</string>
-        <string>fb-messenger-share</string>
+        <string>fbshareextension</string>
+        <!-- Twitter-->
         <string>twitter</string>
         <string>twitterauth</string>
     </array>

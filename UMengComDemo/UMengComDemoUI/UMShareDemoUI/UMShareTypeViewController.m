@@ -9,6 +9,7 @@
 #import "UMShareTypeViewController.h"
 #import <UShareUI/UShareUI.h>
 #import "UMShareCustomParamView.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 static NSString* const UMS_Title = @"【友盟+】社会化组件U-Share";
 static NSString* const UMS_Prog_Title = @"【友盟+】U-Share小程序";
@@ -26,7 +27,9 @@ static NSString* const UMS_WebLink = @"http://mobile.umeng.com/social";
 static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
 
 
-@interface UMShareTypeViewController ()<UITableViewDataSource, UITableViewDelegate>
+typedef void (^PickMediaBlock)(NSURL *);
+
+@interface UMShareTypeViewController ()<UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -35,6 +38,8 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
 @property (nonatomic, strong) NSDictionary *platfomrSupportTypeDict;
 
 @property (nonatomic, strong) UMShareCustomParamView *paramView;
+
+@property (nonatomic, copy) PickMediaBlock pickMediaCompletion;
 
 @end
 
@@ -113,7 +118,7 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
       
       @(UMSocialPlatformType_Linkedin): @[@(UMS_SHARE_TYPE_TEXT), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_TEXT_IMAGE), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
-      @(UMSocialPlatformType_Facebook): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_TEXT_IMAGE), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
+      @(UMSocialPlatformType_Facebook): @[@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL),  @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_VIDEO)],
       
       @(UMSocialPlatformType_Twitter): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_TEXT_IMAGE), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
@@ -123,7 +128,7 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
       
       @(UMSocialPlatformType_Line): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_TEXT_IMAGE)],
       
-      @(UMSocialPlatformType_Tumblr): @[@(UMS_SHARE_TYPE_TEXT)],
+      @(UMSocialPlatformType_Tumblr): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_MULTI), @(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_TEXT_IMAGE), @(UMS_SHARE_TYPE_EMOTION)],
       
       @(UMSocialPlatformType_Pinterest): @[@(UMS_SHARE_TYPE_IMAGE_URL)],
       
@@ -142,7 +147,7 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
        @(UMSocialPlatformType_DropBox): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE),@(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK),@(UMS_SHARE_TYPE_FILE)],
       @(UMSocialPlatformType_VKontakte): @[@(UMS_SHARE_TYPE_TEXT),@(UMS_SHARE_TYPE_IMAGE),@(UMS_SHARE_TYPE_IMAGE_URL), @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
       
-      @(UMSocialPlatformType_FaceBookMessenger): @[@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL),  @(UMS_SHARE_TYPE_WEB_LINK), @(UMS_SHARE_TYPE_MUSIC_LINK), @(UMS_SHARE_TYPE_VIDEO_LINK)],
+      @(UMSocialPlatformType_FaceBookMessenger): @[@(UMS_SHARE_TYPE_IMAGE), @(UMS_SHARE_TYPE_IMAGE_URL),  @(UMS_SHARE_TYPE_WEB_LINK)],
       };
 }
 
@@ -272,7 +277,10 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
             break;
         case UMS_SHARE_TYPE_VIDEO:
         {
-//            [self shareLocalVedioToPlatformType:self.platform];
+            __weak typeof(self) ws = self;
+            [self pickMediaDataURLWithCompletion:^(NSURL *url) {
+                [ws shareVedioToPlatformType:ws.platform withUrlString:url.absoluteString];
+            }];
         }
             break;
         case UMS_SHARE_TYPE_EMOTION:
@@ -334,6 +342,37 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 45.f;
+}
+
+#pragma mark - pick image
+- (void)pickMediaDataURLWithCompletion:(PickMediaBlock)completion
+{
+    self.pickMediaCompletion = completion;
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    UIImagePickerControllerSourceType sourcheType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie,nil];
+    picker.sourceType = sourcheType;
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    NSURL *videoURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    if (self.pickMediaCompletion) {
+        self.pickMediaCompletion(videoURL);
+    }
+    
 }
 
 #pragma mark - Long gesture
@@ -763,6 +802,11 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
 }
 //视频分享
 - (void)shareVedioToPlatformType:(UMSocialPlatformType)platformType
+ {
+     [self shareVedioToPlatformType:platformType withUrlString:@"http://video.sina.com.cn/p/sports/cba/v/2013-10-22/144463050817.html"];
+ }
+ 
+ - (void)shareVedioToPlatformType:(UMSocialPlatformType)platformType withUrlString:(NSString *)url
 {
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
@@ -770,7 +814,7 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
     NSString* thumbURL =  UMS_THUMB_IMAGE;
     UMShareVideoObject *shareObject = [UMShareVideoObject shareObjectWithTitle:UMS_Title descr:UMS_Video_Desc thumImage:thumbURL];
     //设置视频网页播放地址
-    shareObject.videoUrl = @"http://video.sina.com.cn/p/sports/cba/v/2013-10-22/144463050817.html";
+    shareObject.videoUrl = url;
     
     //分享消息对象设置分享内容对象
     messageObject.shareObject = shareObject;
@@ -967,7 +1011,7 @@ static NSString *UMS_SHARE_TBL_CELL = @"UMS_SHARE_TBL_CELL";
 {
     NSString *result = nil;
     if (!error) {
-        result = [NSString stringWithFormat:@"Share succeed"];
+        result = [NSString stringWithFormat:@"Share complete"];
     }
     else{
         NSMutableString *str = [NSMutableString string];

@@ -54,13 +54,6 @@
 
 
 /**
- *  thumblr平台需要作为标示的字段 tag
- *  @discuss 默认的tag是UMSocial_ThumblrTag，用户可以自己设置自己的tag
- */
-@property(atomic,readwrite,copy)NSString* thumblr_Tag;
-
-
-/**
  *  对平台的分享文本的时候，做规定的截断，默认开启
  *  @discuss 针对特定平台(比如:微信，qq,sina等)对当前的分享信息中的文本截断到合理的位置从而能成功分享
  */
@@ -98,6 +91,12 @@
  *  @discuss 设置isUsingWaterMark此函数为YES后，必须要设置warterMarkConfig,来配置图片水印和字符串水印
  */
 @property(nonatomic,readwrite,strong)UMSocialWarterMarkConfig* warterMarkConfig;
+
+
+/**
+ *  废弃 API
+ */
+@property(atomic,readwrite,copy)NSString* thumblr_Tag;
 
 @end
 
