@@ -23,7 +23,13 @@
   "date": "2018-04-17",
   "title": "v3.2.1",
   "content": "1.修复了swift4.1的兼容性问题。\n2.性能优化。\n"
+  },
+  {
+  "date": "2018-06-19",
+  "title": "v3.2.2",
+  "content": "1.修复部分特殊场景下Devicetoken异常导致的Crash问题。\n"
   }
+
 ]
 
 

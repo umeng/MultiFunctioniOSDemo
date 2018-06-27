@@ -18,9 +18,6 @@
 		1712A4122021B04700A7A456 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4112021B04700A7A456 /* libsqlite3.tbd */; };
 		1712A4142021B04E00A7A456 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4132021B04D00A7A456 /* libz.tbd */; };
 		632B7A8C20874AE9009A1D52 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632B7A8B20874AE9009A1D52 /* Photos.framework */; };
-		632B7A94208882C1009A1D52 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6532022B11700026EEF /* TwitterCore.framework */; };
-		632B7A95208882C1009A1D52 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6542022B11700026EEF /* TwitterKit.framework */; };
-		632B7A96208882C4009A1D52 /* libSocialTwitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6522022B11700026EEF /* libSocialTwitter.a */; };
 		634AA6AC2022B11800026EEF /* libAPOpenSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA5F22022B11700026EEF /* libAPOpenSdk.a */; };
 		634AA6AD2022B11800026EEF /* libSocialAlipayShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA5F32022B11700026EEF /* libSocialAlipayShare.a */; };
 		634AA6AE2022B11800026EEF /* DTShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA5F62022B11700026EEF /* DTShareKit.framework */; };
@@ -29,12 +26,6 @@
 		634AA6B12022B11800026EEF /* libSocialDropBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA5FD2022B11700026EEF /* libSocialDropBox.a */; };
 		634AA6B22022B11800026EEF /* libSocialEmail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6002022B11700026EEF /* libSocialEmail.a */; };
 		634AA6B32022B11800026EEF /* libSocialEverNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6032022B11700026EEF /* libSocialEverNote.a */; };
-		634AA6B42022B11800026EEF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6062022B11700026EEF /* Bolts.framework */; };
-		634AA6B52022B11800026EEF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6082022B11700026EEF /* FBSDKCoreKit.framework */; };
-		634AA6B62022B11800026EEF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6092022B11700026EEF /* FBSDKLoginKit.framework */; };
-		634AA6B72022B11800026EEF /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA60A2022B11700026EEF /* FBSDKMessengerShareKit.framework */; };
-		634AA6B82022B11800026EEF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA60B2022B11700026EEF /* FBSDKShareKit.framework */; };
-		634AA6B92022B11800026EEF /* libSocialFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA60C2022B11700026EEF /* libSocialFacebook.a */; };
 		634AA6BA2022B11800026EEF /* libSocialFlickr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA60F2022B11700026EEF /* libSocialFlickr.a */; };
 		634AA6BB2022B11800026EEF /* libSocialGooglePlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6122022B11700026EEF /* libSocialGooglePlus.a */; };
 		634AA6BC2022B11800026EEF /* libSocialInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6152022B11700026EEF /* libSocialInstagram.a */; };
@@ -52,8 +43,6 @@
 		634AA6CD2022B11800026EEF /* libSocialSMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6492022B11700026EEF /* libSocialSMS.a */; };
 		634AA6CE2022B11800026EEF /* libSocialTencentWeibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA64C2022B11700026EEF /* libSocialTencentWeibo.a */; };
 		634AA6CF2022B11800026EEF /* libSocialTumblr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA64F2022B11700026EEF /* libSocialTumblr.a */; };
-		634AA6D32022B11800026EEF /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 634AA6552022B11700026EEF /* TwitterKitResources.bundle */; };
-		634AA6D42022B11800026EEF /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 634AA6562022B11700026EEF /* TwitterShareExtensionUIResources.bundle */; };
 		634AA6D52022B11800026EEF /* libSocialVKontakte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA6592022B11700026EEF /* libSocialVKontakte.a */; };
 		634AA6D62022B11800026EEF /* libVKSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA65A2022B11700026EEF /* libVKSdk.a */; };
 		634AA6D72022B11800026EEF /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 634AA6832022B11700026EEF /* VKSdkResources.bundle */; };
@@ -540,19 +529,12 @@
 				634AA6C92022B11800026EEF /* libSocialRenren.a in Frameworks */,
 				634AA6DD2022B11800026EEF /* libSocialYiXin.a in Frameworks */,
 				634AA6D82022B11800026EEF /* libSocialWeChat.a in Frameworks */,
-				634AA6B62022B11800026EEF /* FBSDKLoginKit.framework in Frameworks */,
-				632B7A94208882C1009A1D52 /* TwitterCore.framework in Frameworks */,
 				634AA6CD2022B11800026EEF /* libSocialSMS.a in Frameworks */,
-				634AA6B42022B11800026EEF /* Bolts.framework in Frameworks */,
-				632B7A95208882C1009A1D52 /* TwitterKit.framework in Frameworks */,
-				634AA6B92022B11800026EEF /* libSocialFacebook.a in Frameworks */,
 				634AA6DE2022B11800026EEF /* libYixinSDK.a in Frameworks */,
 				634AA6E12022B11800026EEF /* libUMSocialCloudShare.a in Frameworks */,
 				634AA6B22022B11800026EEF /* libSocialEmail.a in Frameworks */,
 				634AA6BD2022B11800026EEF /* KakaoOpenSDK.framework in Frameworks */,
-				632B7A96208882C4009A1D52 /* libSocialTwitter.a in Frameworks */,
 				634AA6C22022B11800026EEF /* libSocialLinkedin.a in Frameworks */,
-				634AA6B72022B11800026EEF /* FBSDKMessengerShareKit.framework in Frameworks */,
 				634AA6CA2022B11800026EEF /* libSocialSina.a in Frameworks */,
 				634AA6D52022B11800026EEF /* libSocialVKontakte.a in Frameworks */,
 				634AA6B12022B11800026EEF /* libSocialDropBox.a in Frameworks */,
@@ -564,7 +546,6 @@
 				1712A40C2021AC5900A7A456 /* UMCommon.framework in Frameworks */,
 				1712A40B2021AC5500A7A456 /* UMPush.framework in Frameworks */,
 				634AA6BB2022B11800026EEF /* libSocialGooglePlus.a in Frameworks */,
-				634AA6B82022B11800026EEF /* FBSDKShareKit.framework in Frameworks */,
 				1712A4062021ABD500A7A456 /* UserNotifications.framework in Frameworks */,
 				634AA6C32022B11800026EEF /* linkedin-sdk.framework in Frameworks */,
 				634AA6B32022B11800026EEF /* libSocialEverNote.a in Frameworks */,
@@ -576,7 +557,6 @@
 				634AA6BA2022B11800026EEF /* libSocialFlickr.a in Frameworks */,
 				634AA6DC2022B11800026EEF /* libSocialWhatsApp.a in Frameworks */,
 				634AA6DF2022B11800026EEF /* libSocialYouDao.a in Frameworks */,
-				634AA6B52022B11800026EEF /* FBSDKCoreKit.framework in Frameworks */,
 				634AA6AF2022B11800026EEF /* libSocialDingDing.a in Frameworks */,
 				634AA6BC2022B11800026EEF /* libSocialInstagram.a in Frameworks */,
 				634AA6BE2022B11800026EEF /* libSocialKakao.a in Frameworks */,
@@ -1451,7 +1431,6 @@
 				E55D16BD201827770031A96A /* dsf.png in Resources */,
 				E55D16A8201827770031A96A /* menu_c@2x.png in Resources */,
 				E55D16CD201827770031A96A /* abtest.png in Resources */,
-				634AA6D42022B11800026EEF /* TwitterShareExtensionUIResources.bundle in Resources */,
 				E55D16AA201827770031A96A /* menu_d@4x.png in Resources */,
 				E55D16B2201827770031A96A /* ok@4x.png in Resources */,
 				634AA6CC2022B11800026EEF /* WeiboSDK.bundle in Resources */,
@@ -1459,7 +1438,6 @@
 				E55D16B8201827770031A96A /* user@2x.png in Resources */,
 				E55D16DA201827770031A96A /* upush@4x.png in Resources */,
 				E55D16D8201827770031A96A /* ushare@2x.png in Resources */,
-				634AA6D32022B11800026EEF /* TwitterKitResources.bundle in Resources */,
 				E55D16BC201827770031A96A /* dsf@2x.png in Resources */,
 				E55D16A4201827770031A96A /* arrow_r@2x.png in Resources */,
 				E55D16B7201827770031A96A /* user@3x.png in Resources */,
