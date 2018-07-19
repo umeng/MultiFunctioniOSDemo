@@ -15,12 +15,6 @@
 +(instancetype)defaultManager;
 
 /**
- 友盟appkey
- */
-@property(nonatomic,strong)NSString* umSocialAppkey;
-@property(nonatomic,strong)NSString* umSocialAppSecret;
-
-/**
  返回当前有效(安装并是可用的)平台列表
  */
 @property(nonatomic,readonly,strong) NSArray * platformTypeArray;
