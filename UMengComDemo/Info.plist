@@ -108,12 +108,6 @@
             </array>
         </dict>
         <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>li4768945</string>
-            </array>
-        </dict>
-        <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
@@ -166,7 +160,7 @@
             <string>liyinIdentifier</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>li4768945</string>
+                <string>li4995225</string>
             </array>
         </dict>
         <dict>
@@ -213,7 +207,7 @@
     <key>KAKAO_SECURE_MODE</key>
     <false/>
     <key>LIAppId</key>
-    <string>4768945</string>
+    <string>4995225</string>
     <key>LSApplicationCategoryType</key>
     <string></string>
     <key>LSApplicationQueriesSchemes</key>
