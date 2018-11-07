@@ -108,6 +108,12 @@
             </array>
         </dict>
         <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>li4995225</string>
+            </array>
+        </dict>
+        <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
@@ -160,7 +166,7 @@
             <string>liyinIdentifier</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>li4995225</string>
+                <string>li4768945</string>
             </array>
         </dict>
         <dict>
