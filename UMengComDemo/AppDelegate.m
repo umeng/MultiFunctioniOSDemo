@@ -55,6 +55,7 @@ extern CFAbsoluteTime StartTime;
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     [UMessage openDebugMode:YES];
+    [UMessage setWebViewClassString:@"UMWebViewController"];
     [UMessage addLaunchMessage];
     double launchTime = (CFAbsoluteTimeGetCurrent() - StartTime);
     NSLog(@"double======%f",launchTime);

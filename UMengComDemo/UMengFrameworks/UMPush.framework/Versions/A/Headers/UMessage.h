@@ -243,7 +243,7 @@ typedef void (^UMPlaunchFinishBlock)();
 /**
  @warning 注意此方法使用场景必须有Navigation 
  设置webViewController在.h文件中声明一个叫url的参数，SDK内部会去调用
- @param webViewController webViewController
+ @param webViewClassString webViewController的Class String
  */
-+(void)setWebViewController:(UIViewController * __nonnull)webViewController;
++(void)setWebViewClassString:(NSString * __nonnull)webViewClassString;
 @end

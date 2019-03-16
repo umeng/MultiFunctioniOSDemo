@@ -17,6 +17,7 @@
 		1712A4102021AECE00A7A456 /* UMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1712A40F2021AECE00A7A456 /* UMAlertView.m */; };
 		1712A4122021B04700A7A456 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4112021B04700A7A456 /* libsqlite3.tbd */; };
 		1712A4142021B04E00A7A456 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4132021B04D00A7A456 /* libz.tbd */; };
+		17C04212223B42F100784A6C /* UMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C04210223B42F000784A6C /* UMWebViewController.m */; };
 		632B7A8C20874AE9009A1D52 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632B7A8B20874AE9009A1D52 /* Photos.framework */; };
 		634AA6AC2022B11800026EEF /* libAPOpenSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA5F22022B11700026EEF /* libAPOpenSdk.a */; };
 		634AA6AD2022B11800026EEF /* libSocialAlipayShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634AA5F32022B11700026EEF /* libSocialAlipayShare.a */; };
@@ -202,6 +203,8 @@
 		1712A4112021B04700A7A456 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1712A4132021B04D00A7A456 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1789994B2022A8CF00324599 /* UMengComDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UMengComDemo.entitlements; sourceTree = "<group>"; };
+		17C04210223B42F000784A6C /* UMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMWebViewController.m; sourceTree = "<group>"; };
+		17C04211223B42F100784A6C /* UMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMWebViewController.h; sourceTree = "<group>"; };
 		632B7A8B20874AE9009A1D52 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		634AA5F02022B11700026EEF /* APOpenAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APOpenAPI.h; sourceTree = "<group>"; };
 		634AA5F12022B11700026EEF /* APOpenAPIObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APOpenAPIObject.h; sourceTree = "<group>"; };
@@ -1110,6 +1113,8 @@
 				E54497552015B749005D4841 /* AppDelegate.m */,
 				E54497572015B749005D4841 /* ViewController.h */,
 				E54497582015B749005D4841 /* ViewController.m */,
+				17C04211223B42F100784A6C /* UMWebViewController.h */,
+				17C04210223B42F000784A6C /* UMWebViewController.m */,
 				E544975D2015B749005D4841 /* Assets.xcassets */,
 				E54497622015B749005D4841 /* Info.plist */,
 				E54497512015B748005D4841 /* Supporting Files */,
@@ -1498,6 +1503,7 @@
 				634AA7182022C09000026EEF /* UMSRootViewController.m in Sources */,
 				E55D16EC20182A2D0031A96A /* UMengComUtility.m in Sources */,
 				E54497A22016FB55005D4841 /* UMSegmentView.m in Sources */,
+				17C04212223B42F100784A6C /* UMWebViewController.m in Sources */,
 				170508CF20188205008C3046 /* UMNaviViewController.m in Sources */,
 				E54497562015B749005D4841 /* AppDelegate.m in Sources */,
 				E5DDE4F22048FFA7001364F2 /* UMCommonSwiftInterface.swift in Sources */,
