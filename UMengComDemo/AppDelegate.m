@@ -12,7 +12,7 @@
 #import <UMCommon/UMCommon.h>
 #import <UMPush/UMessage.h>
 #import <UMShare/UMShare.h>
-#import <UMAnalytics/MobClick.h>
+#import <UMCommon/MobClick.h>
 #import <UserNotifications/UserNotifications.h>
 #import <UMCommonLog/UMCommonLogHeaders.h>
 extern CFAbsoluteTime StartTime;
@@ -31,7 +31,6 @@ extern CFAbsoluteTime StartTime;
     
     [UMConfigure initWithAppkey:@"59892ebcaed179694b000104" channel:@"App Store"];
     
-    [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
     // Push's basic setting
     UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
     //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标

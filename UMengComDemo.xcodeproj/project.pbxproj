@@ -13,7 +13,6 @@
 		1712A4062021ABD500A7A456 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4052021ABD500A7A456 /* UserNotifications.framework */; };
 		1712A40B2021AC5500A7A456 /* UMPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A40A2021AC4700A7A456 /* UMPush.framework */; };
 		1712A40C2021AC5900A7A456 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4092021AC3900A7A456 /* UMCommon.framework */; };
-		1712A40D2021AC5C00A7A456 /* UMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4082021AC3100A7A456 /* UMAnalytics.framework */; };
 		1712A4102021AECE00A7A456 /* UMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1712A40F2021AECE00A7A456 /* UMAlertView.m */; };
 		1712A4122021B04700A7A456 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4112021B04700A7A456 /* libsqlite3.tbd */; };
 		1712A4142021B04E00A7A456 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4132021B04D00A7A456 /* libz.tbd */; };
@@ -84,8 +83,8 @@
 		6387F6222022FD960062FFC0 /* menu_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6387F6202022FD960062FFC0 /* menu_bottom@2x.png */; };
 		6387F629202319A20062FFC0 /* UMShareCustomParamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387F628202319A20062FFC0 /* UMShareCustomParamView.m */; };
 		831EBB3D2022F13900DB37AB /* UMAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB372022F13900DB37AB /* UMAnalyticsViewController.m */; };
-		831EBB3E2022F13900DB37AB /* UMDplusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB3A2022F13900DB37AB /* UMDplusViewController.m */; };
 		831EBB3F2022F13900DB37AB /* UMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB3B2022F13900DB37AB /* UMGameViewController.m */; };
+		83C5D6DE242876B60085780B /* UMAnalyticsGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C5D6DD242876B60085780B /* UMAnalyticsGame.framework */; };
 		E54497532015B749005D4841 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497522015B749005D4841 /* main.m */; };
 		E54497562015B749005D4841 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497552015B749005D4841 /* AppDelegate.m */; };
 		E54497592015B749005D4841 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497582015B749005D4841 /* ViewController.m */; };
@@ -183,7 +182,6 @@
 		E5DDE3FC204531B3001364F2 /* UMCommonLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DDE3FA204531B2001364F2 /* UMCommonLog.framework */; };
 		E5DDE4F12048FFA7001364F2 /* UMAnalyticsSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDE4E92048FFA7001364F2 /* UMAnalyticsSwiftInterface.swift */; };
 		E5DDE4F22048FFA7001364F2 /* UMCommonSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDE4EA2048FFA7001364F2 /* UMCommonSwiftInterface.swift */; };
-		E5DDE4F32048FFA7001364F2 /* UMDplusMobClickSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDE4EB2048FFA7001364F2 /* UMDplusMobClickSwiftInterface.swift */; };
 		E5DDE4F42048FFA7001364F2 /* UMessageSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDE4ED2048FFA7001364F2 /* UMessageSwiftInterface.swift */; };
 		E5DDE4F52048FFA7001364F2 /* UMGameAnalyticsSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDE4EE2048FFA7001364F2 /* UMGameAnalyticsSwiftInterface.swift */; };
 		E5DDE4F62048FFA7001364F2 /* UMShareSwiftInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDE4EF2048FFA7001364F2 /* UMShareSwiftInterface.swift */; };
@@ -391,11 +389,10 @@
 		6387F627202319A20062FFC0 /* UMShareCustomParamView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMShareCustomParamView.h; sourceTree = "<group>"; };
 		6387F628202319A20062FFC0 /* UMShareCustomParamView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMShareCustomParamView.m; sourceTree = "<group>"; };
 		831EBB372022F13900DB37AB /* UMAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMAnalyticsViewController.m; sourceTree = "<group>"; };
-		831EBB382022F13900DB37AB /* UMDplusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDplusViewController.h; sourceTree = "<group>"; };
 		831EBB392022F13900DB37AB /* UMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMGameViewController.h; sourceTree = "<group>"; };
-		831EBB3A2022F13900DB37AB /* UMDplusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDplusViewController.m; sourceTree = "<group>"; };
 		831EBB3B2022F13900DB37AB /* UMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMGameViewController.m; sourceTree = "<group>"; };
 		831EBB3C2022F13900DB37AB /* UMAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsViewController.h; sourceTree = "<group>"; };
+		83C5D6DD242876B60085780B /* UMAnalyticsGame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalyticsGame.framework; sourceTree = "<group>"; };
 		E544974E2015B748005D4841 /* UMengComDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMengComDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54497522015B749005D4841 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E54497542015B749005D4841 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -508,7 +505,6 @@
 		E5DDE4E62048FDF9001364F2 /* UMengComDemo_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMengComDemo_PrefixHeader.pch; sourceTree = "<group>"; };
 		E5DDE4E92048FFA7001364F2 /* UMAnalyticsSwiftInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMAnalyticsSwiftInterface.swift; sourceTree = "<group>"; };
 		E5DDE4EA2048FFA7001364F2 /* UMCommonSwiftInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMCommonSwiftInterface.swift; sourceTree = "<group>"; };
-		E5DDE4EB2048FFA7001364F2 /* UMDplusMobClickSwiftInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMDplusMobClickSwiftInterface.swift; sourceTree = "<group>"; };
 		E5DDE4EC2048FFA7001364F2 /* UMengComDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UMengComDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		E5DDE4ED2048FFA7001364F2 /* UMessageSwiftInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMessageSwiftInterface.swift; sourceTree = "<group>"; };
 		E5DDE4EE2048FFA7001364F2 /* UMGameAnalyticsSwiftInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMGameAnalyticsSwiftInterface.swift; sourceTree = "<group>"; };
@@ -561,12 +557,12 @@
 				634AA6DC2022B11800026EEF /* libSocialWhatsApp.a in Frameworks */,
 				634AA6DF2022B11800026EEF /* libSocialYouDao.a in Frameworks */,
 				634AA6AF2022B11800026EEF /* libSocialDingDing.a in Frameworks */,
+				83C5D6DE242876B60085780B /* UMAnalyticsGame.framework in Frameworks */,
 				634AA6BC2022B11800026EEF /* libSocialInstagram.a in Frameworks */,
 				634AA6BE2022B11800026EEF /* libSocialKakao.a in Frameworks */,
 				634AA6E52022B11800026EEF /* UShareUI.framework in Frameworks */,
 				634AA6E02022B11800026EEF /* UMShare.framework in Frameworks */,
 				634AA6C42022B11800026EEF /* libSocialPinterest.a in Frameworks */,
-				1712A40D2021AC5C00A7A456 /* UMAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +599,7 @@
 		1712A4072021ABEA00A7A456 /* UMengFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83C5D6DD242876B60085780B /* UMAnalyticsGame.framework */,
 				E5DDE3F9204531B2001364F2 /* UMCommonLog.bundle */,
 				E5DDE3FA204531B2001364F2 /* UMCommonLog.framework */,
 				634AA5ED2022B11700026EEF /* UMShare */,
@@ -1076,9 +1073,7 @@
 			isa = PBXGroup;
 			children = (
 				831EBB372022F13900DB37AB /* UMAnalyticsViewController.m */,
-				831EBB382022F13900DB37AB /* UMDplusViewController.h */,
 				831EBB392022F13900DB37AB /* UMGameViewController.h */,
-				831EBB3A2022F13900DB37AB /* UMDplusViewController.m */,
 				831EBB3B2022F13900DB37AB /* UMGameViewController.m */,
 				831EBB3C2022F13900DB37AB /* UMAnalyticsViewController.h */,
 			);
@@ -1301,7 +1296,6 @@
 			children = (
 				E5DDE4E92048FFA7001364F2 /* UMAnalyticsSwiftInterface.swift */,
 				E5DDE4EA2048FFA7001364F2 /* UMCommonSwiftInterface.swift */,
-				E5DDE4EB2048FFA7001364F2 /* UMDplusMobClickSwiftInterface.swift */,
 				E5DDE4EC2048FFA7001364F2 /* UMengComDemo-Bridging-Header.h */,
 				E5DDE4ED2048FFA7001364F2 /* UMessageSwiftInterface.swift */,
 				E5DDE4EE2048FFA7001364F2 /* UMGameAnalyticsSwiftInterface.swift */,
@@ -1359,6 +1353,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1491,7 +1486,6 @@
 				634AA7192022C09000026EEF /* UMShareViewController.m in Sources */,
 				1712A4102021AECE00A7A456 /* UMAlertView.m in Sources */,
 				634AA7092022C09000026EEF /* UMSAuthDetailViewController.m in Sources */,
-				E5DDE4F32048FFA7001364F2 /* UMDplusMobClickSwiftInterface.swift in Sources */,
 				170508D4202067DF008C3046 /* UMPushViewController.m in Sources */,
 				831EBB3F2022F13900DB37AB /* UMGameViewController.m in Sources */,
 				E54497A9201702B8005D4841 /* UMDetailLogCell.m in Sources */,
@@ -1507,7 +1501,6 @@
 				170508CF20188205008C3046 /* UMNaviViewController.m in Sources */,
 				E54497562015B749005D4841 /* AppDelegate.m in Sources */,
 				E5DDE4F22048FFA7001364F2 /* UMCommonSwiftInterface.swift in Sources */,
-				831EBB3E2022F13900DB37AB /* UMDplusViewController.m in Sources */,
 				E54497532015B749005D4841 /* main.m in Sources */,
 				E54497A02016FB55005D4841 /* UMFlipCollectionView.m in Sources */,
 				E5DDE4F42048FFA7001364F2 /* UMessageSwiftInterface.swift in Sources */,
@@ -1646,7 +1639,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/UMengComDemo/UMengFrameworks";
 				INFOPLIST_FILE = UMengComDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1688,7 +1681,7 @@
 				PROVISIONING_PROFILE = "74eca774-48cf-46a7-9efc-5c76a1c815a4";
 				PROVISIONING_PROFILE_SPECIFIER = UMComDemo_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UMengComDemo/UMSwift3.0/UMengComDemo-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1719,7 +1712,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UMengComDemo/UMengComDemo_PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/UMengComDemo/UMengFrameworks";
 				INFOPLIST_FILE = UMengComDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1761,7 +1754,7 @@
 				PROVISIONING_PROFILE = "ce77059f-c89f-4a6c-8e78-3e23cb2fc4a9";
 				PROVISIONING_PROFILE_SPECIFIER = inhouse_com_umeng_UMComDemo;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UMengComDemo/UMSwift3.0/UMengComDemo-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

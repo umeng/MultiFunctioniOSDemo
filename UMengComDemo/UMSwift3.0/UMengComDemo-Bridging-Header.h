@@ -17,9 +17,8 @@
 #import <UShareUI/UShareUI.h>
 
 //导入UMAnalytics的OC的头文件
-#import <UMAnalytics/DplusMobClick.h>
-#import <UMAnalytics/MobClick.h>
-#import <UMAnalytics/MobClickGameAnalytics.h>
+#import <UMCommon/MobClick.h>
+#import <UMAnalyticsGame/MobClickGameAnalytics.h>
 
 //导入UMPush的OC的头文件
 #import <UMPush/UMessage.h>
