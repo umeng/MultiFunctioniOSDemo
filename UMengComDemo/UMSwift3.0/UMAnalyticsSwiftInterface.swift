@@ -12,9 +12,6 @@ import CoreLocation
 class UMAnalyticsSwiftInterface: NSObject {
     
 //基础设置
-    static func setScenarioType(eSType:eScenarioType){
-        MobClick.setScenarioType(eSType);
-    }
     
     
     static func setCrashReportEnabled(value:Bool){

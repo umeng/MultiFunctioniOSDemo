@@ -1,0 +1,26 @@
+/*
+  UMCommonLog.strings
+  testUMCommonLog
+
+  Created by 张军华 on 2017/12/11.
+  Copyright © 2017年 张军华. All rights reserved.
+*/
+
+
+
+////////////////////////////////////////////////
+//init begin
+
+analytics_init_error21 = "[AIE10014]MobClickGameAnalytics orderId 不能大于 1024字节 https://developer.umeng.com/docs/66632/detail/67001?um_channel=sdk";
+analytics_init_error22 = "[AIE10014]MobClickGameAnalytics currencyType 不能大于 3字节 https://developer.umeng.com/docs/66632/detail/67001?um_channel=sdk";
+
+
+analytics_init_error55 = "[AIE10014]MobClickGameAnalytics level不能为空 https://developer.umeng.com/docs/66632/detail/67000?um_channel=sdk";
+analytics_init_error56 = "[AIE10014]MobClickGameAnalytics 请检查currencyAmount和virtualAmount是否正确 https://developer.umeng.com/docs/66632/detail/67001?um_channel=sdk";
+analytics_init_error57 = "[AIE10014]请检查参数是否正确 https://developer.umeng.com/docs/66632/detail/67001?um_channel=sdk";
+
+
+
+
+analytics_init_warn8 = "setUserLevel 方法已下线，请使用setUserLevelId方法";
+analytics_init_warn9 = "setUserID 方法已下线，请使用其他相关User的方法";

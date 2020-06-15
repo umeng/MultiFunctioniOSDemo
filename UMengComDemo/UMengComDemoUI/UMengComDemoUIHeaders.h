@@ -20,8 +20,7 @@
 
 //统计页面
 #import "UMAnalyticsViewController.h"
-//Dplus页面
-#import "UMDplusViewController.h"
+
 //游戏统计页面
 #import "UMGameViewController.h"
 

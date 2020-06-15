@@ -7,7 +7,7 @@
 //
 
 #import "UMGameViewController.h"
-#import <UMAnalytics/MobClickGameAnalytics.h>
+#import <UMAnalyticsGame/MobClickGameAnalytics.h>
 #import "UMAlertView.h"
 //tableview的indexPath需要的枚举变量
 typedef NS_ENUM(NSInteger, UMengComType)
