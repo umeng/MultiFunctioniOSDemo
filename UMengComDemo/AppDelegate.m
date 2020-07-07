@@ -250,7 +250,7 @@ extern CFAbsoluteTime StartTime;
     [[UMSocialManager defaultManager] setPlaform: UMSocialPlatformType_DingDing appKey:@"dingoalmlnohc0wggfedpk" appSecret:nil redirectURL:nil];
     
     /* 支付宝的appKey */
-    [[UMSocialManager defaultManager] setPlaform: UMSocialPlatformType_AlipaySession appKey:@"2015111700822536" appSecret:nil redirectURL:nil];
+    [[UMSocialManager defaultManager] setPlaform: UMSocialPlatformType_APSession appKey:@"2015111700822536" appSecret:nil redirectURL:nil];
     
     /* 设置易信的appKey */
     [[UMSocialManager defaultManager] setPlaform: UMSocialPlatformType_YixinSession appKey:@"yx35664bdff4db42c2b7be1e29390c1a06" appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];

@@ -86,7 +86,7 @@ static NSString *UMS_UI_TBL_CELL = @"UMS_UI_TBL_CELL";
                                                @(UMSocialPlatformType_Tim),
                                                @(UMSocialPlatformType_Sina),
                                                @(UMSocialPlatformType_TencentWb),
-                                               @(UMSocialPlatformType_AlipaySession),
+                                               @(UMSocialPlatformType_APSession),
                                                @(UMSocialPlatformType_DingDing),
                                                @(UMSocialPlatformType_Renren),
                                                @(UMSocialPlatformType_Douban),

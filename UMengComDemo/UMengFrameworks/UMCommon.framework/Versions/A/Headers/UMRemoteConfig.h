@@ -64,7 +64,7 @@ typedef void (^UMRemoteConfigActivateCompletion)(NSError *_Nullable error);
 @class UMRemoteConfigSettings;
 @interface UMRemoteConfig : NSObject
 
-@property(nonatomic,assign)id<UMRemoteConfigDelegate> remoteConfigDelegate;
+@property(nonatomic,weak)id<UMRemoteConfigDelegate> remoteConfigDelegate;
 @property(nonatomic, readwrite, strong) UMRemoteConfigSettings *configSettings;
 
 

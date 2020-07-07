@@ -10,7 +10,7 @@
 typedef void(^CallbackBlock)();
 
 @class CLLocation;
-@interface MobClick : NSObject <UIAlertViewDelegate>
+@interface MobClick : NSObject 
 
 #pragma mark basics
 
@@ -189,11 +189,6 @@ typedef void(^CallbackBlock)();
 
 + (void)setCrashCBBlock:(CallbackBlock)cbBlock;
 
-/** DeepLink事件
- @param link 唤起应用的link
- @return void.
- */
-+ (void)onDeepLinkReceived:(NSURL *)link;
 
 /**
  * 设置预置事件属性 键值对 会覆盖同名的key

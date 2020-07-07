@@ -44,6 +44,17 @@
  */
 @property(atomic,readwrite, copy)NSString* type;
 
+/**
+ *  Universal Links设置
+ *  @note  universalLinkDic 的key是由UMSocialPlatformType来确定
+ *         universalLinkDic 的value是由对应平台申请的universalLink来设置
+ *
+ *  @exapmle 比如微信平台的universalLink为:@"https://developer.umeng.com/"
+ *  在初始化每个平台之前调用
+ *  [UMSocialGlobal shareInstance].universalLinkDic = @{@(UMSocialPlatformType_WechatSession):@"https://developer.umeng.com/"};
+ */
+@property(atomic,readwrite, copy)NSDictionary* universalLinkDic;
+
 
 /**
  *  UMSocial的版本号

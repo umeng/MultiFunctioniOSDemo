@@ -85,6 +85,8 @@
 		831EBB3D2022F13900DB37AB /* UMAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB372022F13900DB37AB /* UMAnalyticsViewController.m */; };
 		831EBB3F2022F13900DB37AB /* UMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB3B2022F13900DB37AB /* UMGameViewController.m */; };
 		837A2DE924979DD70092A5A4 /* UMAnalyticsGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */; };
+		83E4594F24B4A6450066D78D /* UMDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4594E24B4A6450066D78D /* UMDevice.framework */; };
+		83E4595124B4AA760066D78D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4595024B4AA760066D78D /* WebKit.framework */; };
 		E54497532015B749005D4841 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497522015B749005D4841 /* main.m */; };
 		E54497562015B749005D4841 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497552015B749005D4841 /* AppDelegate.m */; };
 		E54497592015B749005D4841 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497582015B749005D4841 /* ViewController.m */; };
@@ -392,6 +394,8 @@
 		831EBB3B2022F13900DB37AB /* UMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMGameViewController.m; sourceTree = "<group>"; };
 		831EBB3C2022F13900DB37AB /* UMAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsViewController.h; sourceTree = "<group>"; };
 		837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalyticsGame.framework; sourceTree = "<group>"; };
+		83E4594E24B4A6450066D78D /* UMDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMDevice.framework; sourceTree = "<group>"; };
+		83E4595024B4AA760066D78D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E544974E2015B748005D4841 /* UMengComDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMengComDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54497522015B749005D4841 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E54497542015B749005D4841 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -515,6 +519,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E4595124B4AA760066D78D /* WebKit.framework in Frameworks */,
+				83E4594F24B4A6450066D78D /* UMDevice.framework in Frameworks */,
 				632B7A8C20874AE9009A1D52 /* Photos.framework in Frameworks */,
 				634AA6EF2022B1BB00026EEF /* ImageIO.framework in Frameworks */,
 				1712A4142021B04E00A7A456 /* libz.tbd in Frameworks */,
@@ -582,6 +588,7 @@
 		1712A4042021ABD500A7A456 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83E4595024B4AA760066D78D /* WebKit.framework */,
 				632B7A8B20874AE9009A1D52 /* Photos.framework */,
 				634AA6EE2022B1BB00026EEF /* ImageIO.framework */,
 				634AA6EC2022B1AE00026EEF /* libc++.tbd */,
@@ -598,6 +605,7 @@
 		1712A4072021ABEA00A7A456 /* UMengFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83E4594E24B4A6450066D78D /* UMDevice.framework */,
 				837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */,
 				E5DDE3F9204531B2001364F2 /* UMCommonLog.bundle */,
 				E5DDE3FA204531B2001364F2 /* UMCommonLog.framework */,
@@ -1333,7 +1341,7 @@
 				TargetAttributes = {
 					E544974D2015B748005D4841 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 486K7NX823;
+						DevelopmentTeam = K7FM47A3M5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1616,7 +1624,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 486K7NX823;
+				DEVELOPMENT_TEAM = K7FM47A3M5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

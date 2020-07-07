@@ -454,4 +454,34 @@ typedef NS_ENUM(NSUInteger, UShareWXMiniProgramType){
 
 @end
 
+/*! @brief 移动应用直接跳转到小程序
+ *
+ * @see UMShareObject
+ */
+@interface UMShareLaunchMiniProgramObject : UMShareObject
+
+/** 小程序username */
+@property (nonatomic, copy) NSString *userName;
+
+/** 小程序页面的路径
+ * @attention 不填默认拉起小程序首页
+ */
+@property (nonatomic, copy, nullable) NSString *path;
+
+/**
+ 分享小程序的版本（正式，开发，体验）
+ */
+@property (nonatomic, assign) UShareWXMiniProgramType miniProgramType;
+
+/** ext信息
+ * @attention json格式
+ */
+@property (nonatomic, copy, nullable) NSString *extMsg;
+
+/** extDic
+ * @attention 字典，可存放图片等比较大的数据
+ */
+@property (nonatomic, copy, nullable) NSDictionary *extDic;
+@end
+
 

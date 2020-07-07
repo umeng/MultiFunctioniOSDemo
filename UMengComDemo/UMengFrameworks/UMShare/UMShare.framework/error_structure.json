@@ -1,0 +1,10 @@
+310a311
+> ./SocialLibraries/QQ/QQSDK/TencentOpenAPI.framework/Resources
+780c781
+< ./UMSocialUI/UMSocialSDKResources.bundle/UMSocialPlatformTheme/default/umsocial_alipay.png
+---
+> ./UMSocialUI/UMSocialSDKResources.bundle/UMSocialPlatformTheme/default/umsocial_ap.png
+832c833
+< 147 directories, 682 files
+---
+> 148 directories, 682 files

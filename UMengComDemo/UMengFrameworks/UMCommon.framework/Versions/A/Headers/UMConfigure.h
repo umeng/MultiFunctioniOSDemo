@@ -39,4 +39,9 @@
 */
 + (void)setAnalyticsEnabled:(BOOL)value;
 
+
+/**
+ 获取友盟token
+ */
++ (NSString*)getUmengToken;
 @end

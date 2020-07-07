@@ -1,0 +1,6 @@
+framework module UMDevice {
+  umbrella header "UMDevice.h"
+
+  export *
+  module * { export * }
+}
