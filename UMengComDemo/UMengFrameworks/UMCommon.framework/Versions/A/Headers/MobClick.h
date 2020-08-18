@@ -7,8 +7,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-typedef void(^CallbackBlock)();
-
 @class CLLocation;
 @interface MobClick : NSObject 
 
@@ -18,11 +16,7 @@ typedef void(^CallbackBlock)();
 /// @name  设置
 ///---------------------------------------------------------------------------------------
 
-/** 开启CrashReport收集, 默认YES(开启状态).
- @param value 设置为NO,可关闭友盟CrashReport收集功能.
- @return void.
-*/
-+ (void)setCrashReportEnabled:(BOOL)value;
+
 
 #pragma mark event logs
 ///---------------------------------------------------------------------------------------
@@ -186,8 +180,6 @@ typedef void(^CallbackBlock)();
  @return void.
  */
 + (void)setSecret:(NSString *)secret;
-
-+ (void)setCrashCBBlock:(CallbackBlock)cbBlock;
 
 
 /**

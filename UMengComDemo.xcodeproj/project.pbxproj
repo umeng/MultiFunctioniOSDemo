@@ -12,7 +12,6 @@
 		170508D4202067DF008C3046 /* UMPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170508D3202067DE008C3046 /* UMPushViewController.m */; };
 		1712A4062021ABD500A7A456 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4052021ABD500A7A456 /* UserNotifications.framework */; };
 		1712A40B2021AC5500A7A456 /* UMPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A40A2021AC4700A7A456 /* UMPush.framework */; };
-		1712A40C2021AC5900A7A456 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4092021AC3900A7A456 /* UMCommon.framework */; };
 		1712A4102021AECE00A7A456 /* UMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1712A40F2021AECE00A7A456 /* UMAlertView.m */; };
 		1712A4122021B04700A7A456 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4112021B04700A7A456 /* libsqlite3.tbd */; };
 		1712A4142021B04E00A7A456 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712A4132021B04D00A7A456 /* libz.tbd */; };
@@ -84,6 +83,8 @@
 		6387F629202319A20062FFC0 /* UMShareCustomParamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387F628202319A20062FFC0 /* UMShareCustomParamView.m */; };
 		831EBB3D2022F13900DB37AB /* UMAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB372022F13900DB37AB /* UMAnalyticsViewController.m */; };
 		831EBB3F2022F13900DB37AB /* UMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB3B2022F13900DB37AB /* UMGameViewController.m */; };
+		835D7C7D24EBD5F0007997C9 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D7C7C24EBD5F0007997C9 /* UMCommon.framework */; };
+		835D7C7F24EBD5FF007997C9 /* UMCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835D7C7E24EBD5FF007997C9 /* UMCrash.framework */; };
 		837A2DE924979DD70092A5A4 /* UMAnalyticsGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */; };
 		83E4594F24B4A6450066D78D /* UMDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4594E24B4A6450066D78D /* UMDevice.framework */; };
 		83E4595124B4AA760066D78D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E4595024B4AA760066D78D /* WebKit.framework */; };
@@ -195,7 +196,6 @@
 		170508D2202067DE008C3046 /* UMPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMPushViewController.h; sourceTree = "<group>"; };
 		170508D3202067DE008C3046 /* UMPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMPushViewController.m; sourceTree = "<group>"; };
 		1712A4052021ABD500A7A456 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
-		1712A4092021AC3900A7A456 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
 		1712A40A2021AC4700A7A456 /* UMPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMPush.framework; sourceTree = "<group>"; };
 		1712A40E2021AECE00A7A456 /* UMAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMAlertView.h; sourceTree = "<group>"; };
 		1712A40F2021AECE00A7A456 /* UMAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMAlertView.m; sourceTree = "<group>"; };
@@ -393,6 +393,8 @@
 		831EBB392022F13900DB37AB /* UMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMGameViewController.h; sourceTree = "<group>"; };
 		831EBB3B2022F13900DB37AB /* UMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMGameViewController.m; sourceTree = "<group>"; };
 		831EBB3C2022F13900DB37AB /* UMAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsViewController.h; sourceTree = "<group>"; };
+		835D7C7C24EBD5F0007997C9 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
+		835D7C7E24EBD5FF007997C9 /* UMCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCrash.framework; sourceTree = "<group>"; };
 		837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalyticsGame.framework; sourceTree = "<group>"; };
 		83E4594E24B4A6450066D78D /* UMDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMDevice.framework; sourceTree = "<group>"; };
 		83E4595024B4AA760066D78D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -544,13 +546,14 @@
 				634AA6B12022B11800026EEF /* libSocialDropBox.a in Frameworks */,
 				E5DDE3FC204531B3001364F2 /* UMCommonLog.framework in Frameworks */,
 				634AA6B02022B11800026EEF /* libSocialDouban.a in Frameworks */,
+				835D7C7D24EBD5F0007997C9 /* UMCommon.framework in Frameworks */,
 				634AA6CE2022B11800026EEF /* libSocialTencentWeibo.a in Frameworks */,
 				634AA6AE2022B11800026EEF /* DTShareKit.framework in Frameworks */,
 				634AA6AD2022B11800026EEF /* libSocialAlipayShare.a in Frameworks */,
-				1712A40C2021AC5900A7A456 /* UMCommon.framework in Frameworks */,
 				1712A40B2021AC5500A7A456 /* UMPush.framework in Frameworks */,
 				634AA6BB2022B11800026EEF /* libSocialGooglePlus.a in Frameworks */,
 				1712A4062021ABD500A7A456 /* UserNotifications.framework in Frameworks */,
+				835D7C7F24EBD5FF007997C9 /* UMCrash.framework in Frameworks */,
 				634AA6C32022B11800026EEF /* linkedin-sdk.framework in Frameworks */,
 				634AA6B32022B11800026EEF /* libSocialEverNote.a in Frameworks */,
 				634AA6AC2022B11800026EEF /* libAPOpenSdk.a in Frameworks */,
@@ -605,13 +608,14 @@
 		1712A4072021ABEA00A7A456 /* UMengFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				835D7C7E24EBD5FF007997C9 /* UMCrash.framework */,
+				835D7C7C24EBD5F0007997C9 /* UMCommon.framework */,
 				83E4594E24B4A6450066D78D /* UMDevice.framework */,
 				837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */,
 				E5DDE3F9204531B2001364F2 /* UMCommonLog.bundle */,
 				E5DDE3FA204531B2001364F2 /* UMCommonLog.framework */,
 				634AA5ED2022B11700026EEF /* UMShare */,
 				1712A40A2021AC4700A7A456 /* UMPush.framework */,
-				1712A4092021AC3900A7A456 /* UMCommon.framework */,
 			);
 			path = UMengFrameworks;
 			sourceTree = "<group>";
