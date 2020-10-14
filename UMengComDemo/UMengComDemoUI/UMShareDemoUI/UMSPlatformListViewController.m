@@ -227,7 +227,7 @@ static NSString *UMS_NAV_TBL_CELL = @"UMS_NAV_TBL_CELL";
                          [UMSAuthInfo objectWithType:UMSocialPlatformType_Tim],
                          [UMSAuthInfo objectWithType:UMSocialPlatformType_Sina],
                          [UMSAuthInfo objectWithType:UMSocialPlatformType_TencentWb],
-                         [UMSAuthInfo objectWithType:UMSocialPlatformType_AlipaySession],
+                         [UMSAuthInfo objectWithType:UMSocialPlatformType_APSession],
                          [UMSAuthInfo objectWithType:UMSocialPlatformType_DingDing],
                          [UMSAuthInfo objectWithType:UMSocialPlatformType_Renren],
                          [UMSAuthInfo objectWithType:UMSocialPlatformType_Douban],

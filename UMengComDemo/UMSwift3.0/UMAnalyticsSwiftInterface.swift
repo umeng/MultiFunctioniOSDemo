@@ -14,9 +14,7 @@ class UMAnalyticsSwiftInterface: NSObject {
 //基础设置
     
     
-    static func setCrashReportEnabled(value:Bool){
-        MobClick.setCrashReportEnabled(value);
-    }
+ 
     
 //页面计时
     static func logPageView(pageName:String,seconds:Int){
@@ -126,7 +124,5 @@ class UMAnalyticsSwiftInterface: NSObject {
         MobClick.setSecret(secret);
     }
     
-    static func setCrashCBBlock(cbBlock:(@escaping () -> Void)){
-        MobClick.setCrashCBBlock(cbBlock);
-    }
+
 }

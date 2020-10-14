@@ -84,6 +84,9 @@
 		6387F629202319A20062FFC0 /* UMShareCustomParamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6387F628202319A20062FFC0 /* UMShareCustomParamView.m */; };
 		831EBB3D2022F13900DB37AB /* UMAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB372022F13900DB37AB /* UMAnalyticsViewController.m */; };
 		831EBB3F2022F13900DB37AB /* UMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831EBB3B2022F13900DB37AB /* UMGameViewController.m */; };
+		831F50FD2536FC5700BB56B1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831F50FC2536FC5700BB56B1 /* WebKit.framework */; };
+		831F51002536FCD200BB56B1 /* UMDevice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831F50FE2536FCD100BB56B1 /* UMDevice.framework */; };
+		831F51012536FCD200BB56B1 /* UMCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831F50FF2536FCD200BB56B1 /* UMCrash.framework */; };
 		837A2DE924979DD70092A5A4 /* UMAnalyticsGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */; };
 		E54497532015B749005D4841 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497522015B749005D4841 /* main.m */; };
 		E54497562015B749005D4841 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54497552015B749005D4841 /* AppDelegate.m */; };
@@ -391,6 +394,9 @@
 		831EBB392022F13900DB37AB /* UMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMGameViewController.h; sourceTree = "<group>"; };
 		831EBB3B2022F13900DB37AB /* UMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMGameViewController.m; sourceTree = "<group>"; };
 		831EBB3C2022F13900DB37AB /* UMAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsViewController.h; sourceTree = "<group>"; };
+		831F50FC2536FC5700BB56B1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		831F50FE2536FCD100BB56B1 /* UMDevice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMDevice.framework; path = ../../../MultiFunctioniOSDemo1/UMengComDemo/UMengFrameworks/UMDevice.framework; sourceTree = "<group>"; };
+		831F50FF2536FCD200BB56B1 /* UMCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMCrash.framework; path = ../../../MultiFunctioniOSDemo1/UMengComDemo/UMengFrameworks/UMCrash.framework; sourceTree = "<group>"; };
 		837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalyticsGame.framework; sourceTree = "<group>"; };
 		E544974E2015B748005D4841 /* UMengComDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMengComDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54497522015B749005D4841 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -515,14 +521,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831F50FD2536FC5700BB56B1 /* WebKit.framework in Frameworks */,
+				634AA6ED2022B1AE00026EEF /* libc++.tbd in Frameworks */,
 				632B7A8C20874AE9009A1D52 /* Photos.framework in Frameworks */,
 				634AA6EF2022B1BB00026EEF /* ImageIO.framework in Frameworks */,
 				1712A4142021B04E00A7A456 /* libz.tbd in Frameworks */,
-				634AA6ED2022B1AE00026EEF /* libc++.tbd in Frameworks */,
 				634AA6EB2022B1A600026EEF /* CoreTelephony.framework in Frameworks */,
 				634AA6E92022B1A100026EEF /* SystemConfiguration.framework in Frameworks */,
 				634AA6E72022B19300026EEF /* CoreGraphics.framework in Frameworks */,
 				1712A4122021B04700A7A456 /* libsqlite3.tbd in Frameworks */,
+				831F51002536FCD200BB56B1 /* UMDevice.framework in Frameworks */,
 				634AA6C12022B11800026EEF /* libSocialLine.a in Frameworks */,
 				634AA6C92022B11800026EEF /* libSocialRenren.a in Frameworks */,
 				634AA6DD2022B11800026EEF /* libSocialYiXin.a in Frameworks */,
@@ -545,6 +553,7 @@
 				1712A40B2021AC5500A7A456 /* UMPush.framework in Frameworks */,
 				634AA6BB2022B11800026EEF /* libSocialGooglePlus.a in Frameworks */,
 				1712A4062021ABD500A7A456 /* UserNotifications.framework in Frameworks */,
+				831F51012536FCD200BB56B1 /* UMCrash.framework in Frameworks */,
 				634AA6C32022B11800026EEF /* linkedin-sdk.framework in Frameworks */,
 				634AA6B32022B11800026EEF /* libSocialEverNote.a in Frameworks */,
 				634AA6AC2022B11800026EEF /* libAPOpenSdk.a in Frameworks */,
@@ -582,6 +591,7 @@
 		1712A4042021ABD500A7A456 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831F50FC2536FC5700BB56B1 /* WebKit.framework */,
 				632B7A8B20874AE9009A1D52 /* Photos.framework */,
 				634AA6EE2022B1BB00026EEF /* ImageIO.framework */,
 				634AA6EC2022B1AE00026EEF /* libc++.tbd */,
@@ -598,6 +608,8 @@
 		1712A4072021ABEA00A7A456 /* UMengFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831F50FF2536FCD200BB56B1 /* UMCrash.framework */,
+				831F50FE2536FCD100BB56B1 /* UMDevice.framework */,
 				837A2DE824979DD70092A5A4 /* UMAnalyticsGame.framework */,
 				E5DDE3F9204531B2001364F2 /* UMCommonLog.bundle */,
 				E5DDE3FA204531B2001364F2 /* UMCommonLog.framework */,
@@ -1333,7 +1345,7 @@
 				TargetAttributes = {
 					E544974D2015B748005D4841 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 486K7NX823;
+						DevelopmentTeam = K7FM47A3M5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1616,7 +1628,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 486K7NX823;
+				DEVELOPMENT_TEAM = K7FM47A3M5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1629,6 +1641,7 @@
 					"$(PROJECT_DIR)/UMengComDemo/UMengFrameworks/UMShare/SocialLibraries/Twitter",
 					"$(PROJECT_DIR)/UMengComDemo/UMengFrameworks/UMShare",
 					"$(PROJECT_DIR)/UMengComDemo/UMengFrameworks/UMShare/UMSocialUI",
+					"$(PROJECT_DIR)1/UMengComDemo/UMengFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UMengComDemo/UMengComDemo_PrefixHeader.pch";
@@ -1706,6 +1719,7 @@
 					"$(PROJECT_DIR)/UMengComDemo/UMengFrameworks/UMShare/SocialLibraries/Twitter",
 					"$(PROJECT_DIR)/UMengComDemo/UMengFrameworks/UMShare",
 					"$(PROJECT_DIR)/UMengComDemo/UMengFrameworks/UMShare/UMSocialUI",
+					"$(PROJECT_DIR)1/UMengComDemo/UMengFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UMengComDemo/UMengComDemo_PrefixHeader.pch";

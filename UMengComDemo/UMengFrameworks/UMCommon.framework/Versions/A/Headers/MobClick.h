@@ -7,10 +7,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-typedef void(^CallbackBlock)();
-
 @class CLLocation;
-@interface MobClick : NSObject <UIAlertViewDelegate>
+@interface MobClick : NSObject 
 
 #pragma mark basics
 
@@ -18,11 +16,7 @@ typedef void(^CallbackBlock)();
 /// @name  设置
 ///---------------------------------------------------------------------------------------
 
-/** 开启CrashReport收集, 默认YES(开启状态).
- @param value 设置为NO,可关闭友盟CrashReport收集功能.
- @return void.
-*/
-+ (void)setCrashReportEnabled:(BOOL)value;
+
 
 #pragma mark event logs
 ///---------------------------------------------------------------------------------------
@@ -187,13 +181,6 @@ typedef void(^CallbackBlock)();
  */
 + (void)setSecret:(NSString *)secret;
 
-+ (void)setCrashCBBlock:(CallbackBlock)cbBlock;
-
-/** DeepLink事件
- @param link 唤起应用的link
- @return void.
- */
-+ (void)onDeepLinkReceived:(NSURL *)link;
 
 /**
  * 设置预置事件属性 键值对 会覆盖同名的key

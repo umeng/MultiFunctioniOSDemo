@@ -68,7 +68,7 @@ extern NSString *const  UMSPlatformNameWechatFavorite;
 /**
  支付宝好友
  */
-extern NSString *const  UMSPlatformNameAlipaySession;
+extern NSString *const  UMSPlatformNameAPSession;
 
 /**
  手机QQ
@@ -187,6 +187,16 @@ extern NSString *const  UMSPlatformNameVKontakte;
  */
 extern NSString *const  UMSPlatformNameFaceBookMessenger;
 
+/**
+*  WechatWork
+*/
+extern NSString *const  UMSPlatformNameWechatWork;
+
+/**
+*  DouYin
+*/
+extern NSString *const  UMSPlatformNameDouYin;
+
 
 /**
  *  授权，分享，UserProfile等操作的回调
@@ -219,6 +229,15 @@ typedef void (^UMSocialAuthCompletionHandler)(id authResponse,NSError *error);
  *  @param error  表示回调的错误码
  */
 typedef void (^UMSocialGetUserInfoCompletionHandler)(id userInfoResponse,NSError *error);
+
+
+/**
+ *  三方平台主动拉起app的回调
+ *
+ *  @param userInfoResponse 表示回调的结果
+ *  @param error  表示回调的错误码
+ */
+typedef void (^UMSocialLaunchFromPlatformCompletionHandler)(id userInfoResponse,NSError *error);
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -307,7 +326,7 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
     UMSocialPlatformType_QQ                 = 4,//QQ聊天页面
     UMSocialPlatformType_Qzone              = 5,//qq空间
     UMSocialPlatformType_TencentWb          = 6,//腾讯微博
-    UMSocialPlatformType_AlipaySession      = 7,//支付宝聊天页面
+    UMSocialPlatformType_APSession      = 7,//支付宝聊天页面
     UMSocialPlatformType_YixinSession       = 8,//易信聊天页面
     UMSocialPlatformType_YixinTimeLine      = 9,//易信朋友圈
     UMSocialPlatformType_YixinFavorite      = 10,//易信收藏
@@ -340,6 +359,9 @@ typedef NS_ENUM(NSInteger,UMSocialPlatformType)
     UMSocialPlatformType_VKontakte          = 33,//vkontakte
     UMSocialPlatformType_FaceBookMessenger  = 34,//FaceBookMessenger
     UMSocialPlatformType_Tim                = 35,// Tencent TIM
+    
+    UMSocialPlatformType_WechatWork         = 36,//企业微信
+    UMSocialPlatformType_DouYin             = 37,//抖音
     
     UMSocialPlatformType_Predefine_end      = 999,
     
