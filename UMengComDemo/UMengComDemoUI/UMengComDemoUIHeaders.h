@@ -21,6 +21,9 @@
 //统计页面
 #import "UMAnalyticsViewController.h"
 
+//APM页面
+#import "UMAPMViewController.h"
+
 //游戏统计页面
 #import "UMGameViewController.h"
 

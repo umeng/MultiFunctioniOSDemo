@@ -20,6 +20,8 @@ typedef NS_ENUM(NSInteger, UMengComType)
 //    UMengComType_UDplus = 1,
     UMengComType_UGame = 1,
     
+    UMengComType_APM = 0,
+    
     //indexPath.section = 1
     UMengComType_UPush = 0,
     UMengComType_UShare = 1,
@@ -74,7 +76,7 @@ typedef NS_ENUM(NSInteger, UMengComType)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -85,9 +87,12 @@ typedef NS_ENUM(NSInteger, UMengComType)
             numberOfRowsInSection = 2;
             break;
         case 1:
-            numberOfRowsInSection = 2;
+            numberOfRowsInSection = 1;
             break;
         case 2:
+            numberOfRowsInSection = 2;
+            break;
+        case 3:
             numberOfRowsInSection = 1;
             break;
         default:
@@ -133,12 +138,37 @@ typedef NS_ENUM(NSInteger, UMengComType)
         
         
     }
+    
     else if (indexPath.section == 1){
         
         static NSString *umSection1ideitifier = @"umSection1ideitifier";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:umSection1ideitifier];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:umSection1ideitifier];
+        }
+        
+        switch (indexPath.row) {
+            case UMengComType_APM:
+                cell.textLabel.text = @"APM";
+                cell.imageView.image = [UIImage imageNamed:@"APM"];
+                break;
+            
+            default:
+                cell.textLabel.text = @"unknown";
+                break;
+        }
+        
+        
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+    }
+    
+    else if (indexPath.section == 2){
+        
+        static NSString *umSection2ideitifier = @"umSection2ideitifier";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:umSection2ideitifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:umSection2ideitifier];
         }
         
         switch (indexPath.row) {
@@ -159,11 +189,11 @@ typedef NS_ENUM(NSInteger, UMengComType)
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }
-    else if (indexPath.section == 2){
-        static NSString *umSection2ideitifier = @"umSection2ideitifier";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:umSection2ideitifier];
+    else if (indexPath.section == 3){
+        static NSString *umSection3ideitifier = @"umSection3ideitifier";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:umSection3ideitifier];
         if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:umSection2ideitifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:umSection3ideitifier];
         }
         
         switch (indexPath.row) {
@@ -199,12 +229,7 @@ typedef NS_ENUM(NSInteger, UMengComType)
                 
             }
             break;
-//            case UMengComType_UDplus:
-//            {
-//                [self.navigationController pushViewController:[[UMDplusViewController alloc] init] animated:YES];
-//                
-//            }
-//            break;
+
             case UMengComType_UGame:
             {
                 [self.navigationController pushViewController:[[UMGameViewController alloc] init] animated:YES];
@@ -216,6 +241,17 @@ typedef NS_ENUM(NSInteger, UMengComType)
         }
     }
     else if (indexPath.section == 1){
+        switch (indexPath.row) {
+            case UMengComType_APM:
+            {
+                [self.navigationController pushViewController:[[UMAPMViewController alloc] init] animated:YES];
+            }
+                break;
+            default:
+                break;
+        }
+    }
+    else if (indexPath.section == 2){
         switch (indexPath.row) {
             case UMengComType_UPush:
             {
@@ -231,7 +267,7 @@ typedef NS_ENUM(NSInteger, UMengComType)
                 break;
         }
     }
-    else if (indexPath.section == 2){
+    else if (indexPath.section == 3){
         switch (indexPath.row) {
             case UMengComType_UpdateLog:
             {

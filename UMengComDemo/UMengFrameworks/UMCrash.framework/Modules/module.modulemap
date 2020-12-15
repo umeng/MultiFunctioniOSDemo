@@ -1,6 +1,0 @@
-framework module UMCrash {
-  umbrella header "UMCrash.h"
-
-  export *
-  module * { export * }
-}
