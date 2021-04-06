@@ -39,9 +39,7 @@
 */
 + (void)setAnalyticsEnabled:(BOOL)value;
 
+//获取zid
++ (NSString *)getUmengZID;
 
-/**
- 获取友盟token
- */
-+ (NSString*)getUmengToken;
 @end

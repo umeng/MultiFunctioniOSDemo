@@ -82,7 +82,7 @@
  @param millisecond 自己计时需要的话需要传毫秒进来
  @return void.
  
- @warning 每个event的attributes不能超过10个
+ @warning 每个event的attributes不能超过100个
     eventId、attributes中key和value都不能使用空格和特殊字符，必须是NSString,且长度不能超过255个字符（否则将截取前255个字符）
     id， ts， du是保留字段，不能作为eventId及key的名称
 */
