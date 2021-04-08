@@ -16,5 +16,10 @@ typedef NSString *_Nullable(^CallbackBlock)(void);
 //return字符串不能大于256字节，大于部分将被截取
 + (void)setCrashCBBlock:(CallbackBlock _Nullable )cbBlock;
 
+
+
+
+
+
 @end
 
