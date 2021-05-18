@@ -215,6 +215,7 @@
  */
 + (void)setAutoPageEnabled:(BOOL)value;
 
+
 @end
 
 
