@@ -215,6 +215,10 @@
  */
 + (void)setAutoPageEnabled:(BOOL)value;
 
+/**
+ *集成测试。
+ */
++ (BOOL)handleUrl:(NSURL *)url;
 
 @end
 
