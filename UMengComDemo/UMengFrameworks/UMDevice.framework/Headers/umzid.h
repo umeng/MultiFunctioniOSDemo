@@ -16,7 +16,7 @@
 + (void)initWithAppKey:(NSString *)appkey completion:(void (^)(NSString *uToken))completion;
 
 /// 同步获得uToken，失败返回空字符串@“”
-+ (NSString *)getZid;
++ (NSString *)getZID;
 
 /// 获取SDK版本号
 + (NSString *)getSDKVersion;
