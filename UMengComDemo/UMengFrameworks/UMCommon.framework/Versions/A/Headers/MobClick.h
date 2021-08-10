@@ -7,8 +7,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@class CLLocation;
-@interface MobClick : NSObject 
+@interface MobClick : NSObject
 
 #pragma mark basics
 
@@ -157,11 +156,6 @@
  */
 + (void)setLatitude:(double)latitude longitude:(double)longitude;
 
-/** 设置经纬度信息
- @param location CLLocation 经纬度信息
- @return void
- */
-+ (void)setLocation:(CLLocation *)location;
 
 ///---------------------------------------------------------------------------------------
 /// @name Utility函数

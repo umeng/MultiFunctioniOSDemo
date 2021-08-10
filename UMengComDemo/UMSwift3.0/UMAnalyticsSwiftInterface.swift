@@ -108,9 +108,7 @@ class UMAnalyticsSwiftInterface: NSObject {
         MobClick.setLatitude(latitude, longitude: longitude);
     }
     
-    static func setLocation(location:CLLocation){
-        MobClick.setLocation(location);
-    }
+
     
     static func isJailbroken() -> Bool{
         return MobClick.isJailbroken();
