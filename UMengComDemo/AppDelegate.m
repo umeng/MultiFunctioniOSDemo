@@ -25,37 +25,42 @@ extern CFAbsoluteTime StartTime;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //开发者需要显式的调用此函数，日志系统才能工作
-    [UMCommonLogManager setUpUMCommonLogManager];
-    [UMConfigure setLogEnabled:YES];
-    
-    [UMConfigure initWithAppkey:@"59892ebcaed179694b000104" channel:@"App Store"];
-    
-    // Push's basic setting
-    UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
-    //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
-    entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert;
-    [UNUserNotificationCenter currentNotificationCenter].delegate=self;
-    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        if (granted) {
-        }else
-        {
-        }
-    }];
-    
-    // Share's setting
-    [self setupUSharePlatforms];   // required: setting platforms on demand
-    [self setupUShareSettings];
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //隐私协议判断
+    if([[defaults objectForKey:@"showStatus"] isEqualToString:@"1"]){
+
+        //开发者需要显式的调用此函数，日志系统才能工作
+        [UMCommonLogManager setUpUMCommonLogManager];
+        [UMConfigure setLogEnabled:YES];
+        
+        [UMConfigure initWithAppkey:@"59892ebcaed179694b000104" channel:@"App Store"];
+        
+        // Push's basic setting
+        UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
+        //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
+        entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert;
+        [UNUserNotificationCenter currentNotificationCenter].delegate=self;
+        [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+            }else
+            {
+            }
+        }];
+        
+        // Share's setting
+        [self setupUSharePlatforms];   // required: setting platforms on demand
+        [self setupUShareSettings];
+        [UMessage openDebugMode:YES];
+        [UMessage setWebViewClassString:@"UMWebViewController"];
+        [UMessage addLaunchMessage];
+    }
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UMMainViewController* rootVC = [[UMMainViewController alloc] init];
     UMNaviViewController *navVC = [[UMNaviViewController alloc] initWithRootViewController:rootVC];
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
-    [UMessage openDebugMode:YES];
-    [UMessage setWebViewClassString:@"UMWebViewController"];
-    [UMessage addLaunchMessage];
+
     double launchTime = (CFAbsoluteTimeGetCurrent() - StartTime);
     NSLog(@"double======%f",launchTime);
     return YES;
