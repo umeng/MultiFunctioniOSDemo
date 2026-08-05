@@ -1,3 +1,16 @@
+# Umeng+ iOS SDK Demo
+
+友盟+ iOS SDK 官方集成示例，覆盖U-App移动统计、U-Push消息推送、U-APM性能监控和U-Share社会化分享。
+
+## Quick Links｜快速入口
+
+- [SDK开发者中心](https://devs.umeng.com/)
+- [友盟+官网](https://www.umeng.com/)
+- [提交接入问题](https://github.com/umeng/MultiFunctioniOSDemo/issues)
+
+> 本次仅优化README，不修改Objective-C/Swift代码、Xcode工程和构建配置。
+
+---
 # MultiFunctioniOSDemo
 友盟多功能iOS Demo
 
